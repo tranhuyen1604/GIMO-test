@@ -1,0 +1,23 @@
+{
+    "name": "huyentran/gimo-test",
+    "description": "Prepare a simple RESTful API which allows to interact with two kinds of records: movies and songs.",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/Utilities/helper.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Huyen Tran",
+            "email": "tranhuyen164@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/php-timer": "^5.0"
+    }
+}

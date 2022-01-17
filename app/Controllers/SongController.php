@@ -40,7 +40,7 @@ class SongController extends BaseController
 	  
 				array_push($list_arr['data'], $list_item);
 			}
-			// var_dump($list_arr);
+			var_dump($list_arr);
 
 			return $list_arr;
 		} else {
@@ -48,5 +48,45 @@ class SongController extends BaseController
 				array('message' => 'No Categories Found')
 			);
 		}
+	}
+	
+	/**
+	 * create
+	 *
+	 * @param  mixed $data
+	 * @return void
+	 */
+	public function create($data)
+	{
+		if ($this->songs->create($data)) {
+			return true;
+		}
+
+		return false;
+	}
+	
+	/**
+	 * update
+	 *
+	 * @param  mixed $data
+	 * @return void
+	 */
+	public function update($data)
+	{
+	}
+	
+	/**
+	 * delete data
+	 *
+	 * @param  mixed $id
+	 * @return void
+	 */
+	public function delete($id)
+	{
+		if ($this->songs->delete($id)) {
+			return true;
+		}
+
+		return false;
 	}
 }
